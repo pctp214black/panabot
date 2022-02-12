@@ -20,7 +20,7 @@ const CHANNEL = process.env.BOTCHANNEL;
 function gotMessage(message){
   console.log("New Message!");
 
-  if(/*message.channel.id===CHANNEL &&*/ message.content.match(/([a-z])ola+/) /*&& !message.author.bot*/){
+  if(message.channel.id===CHANNEL && message.content.match(/([a-z])ola+/) /*&& !message.author.bot*/){
     let randomIndex=Math.floor(Math.random()*MESSAGE_RESPONSE.length);
     message.channel.send(MESSAGE_RESPONSE[randomIndex]);//Simplemente contesta
   }
